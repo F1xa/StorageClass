@@ -14,11 +14,11 @@ class Storage {
   }
 
   get() {
-   return JSON.parse(localStorage.getItem(this.names))
+   return JSON.parse(this.options().getItem(this.names))
   }
 
   clear() {
-    localStorage.removeItem(this.names)
+    this.options.removeItem(this.names)
   }
 
   isEmpty() {
